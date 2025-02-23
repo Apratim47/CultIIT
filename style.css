@@ -16,9 +16,15 @@ body, html {
     padding: 10px 20px;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
@@ -28,6 +34,11 @@ body, html {
 .nav-links a {
     text-decoration: none;
     color: #1ba8d7;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
 }
 
 /* Responsive Menu */
@@ -63,21 +74,4 @@ body, html {
     .menu-toggle {
         display: flex;
     }
-}
-
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #fff;
 }
