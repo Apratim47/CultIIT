@@ -8,13 +8,63 @@ body, html {
 
 /* Navigation Bar */
 .navbar {
+    background: #333;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a1a2e;
     padding: 10px 20px;
-    color: #fff;
 }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1ba8d7;
+}
+
+/* Responsive Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 
 .logo {
     font-size: 24px;
