@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://Apratim47:Lockup2025@cluster0.iu952.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -9,3 +9,9 @@ mongoose.connect('mongodb+srv://Apratim47:Lockup2025@cluster0.iu952.mongodb.net/
 }).catch((err) => {
     console.error('MongoDB connection error:', err);
 });
+// Responsive Menu Toggle
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
