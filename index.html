@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        if (!sessionStorage.getItem("loggedIn")) {
+            window.location.href = "login.html";
+        }
+    </script>
+    
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">Cult-IIT</div>
