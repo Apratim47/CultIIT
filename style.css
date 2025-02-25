@@ -121,48 +121,72 @@ footer {
     width: 100%;
     bottom: 0;
 }
-/* Login Page Styles */
-.login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    background: #f4f4f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+body {
+    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .login-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 20px;
+    width: 350px;
     text-align: center;
-}
-
-.login-container h2 {
+    color: #fff;
+  }
+  
+  .login-container h2 {
+    font-size: 2em;
     margin-bottom: 20px;
-    color: #1a1a2e;
-}
-
-.login-container input {
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.login-container button {
-    background: #1ba8d7;
-    color: #fff;
-    padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  .login-container input[type="text"]::placeholder,
+  .login-container input[type="password"]::placeholder {
+    color: #ddd;
+  }
+  
+  .login-container button {
+    background: #fff;
+    color: #4e54c8;
+    border: none;
+    padding: 10px;
     width: 100%;
-    font-size: 16px;
-}
-
-.login-container button:hover {
-    background: #137ca1;
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
-    display: none;
-}
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-container button:hover {
+    background: #e0e0e0;
+  }
+  
+  .login-container .options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin: 15px 0;
+  }
+  
+  .login-container .options a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
