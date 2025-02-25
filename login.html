@@ -3,19 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Cult-IIT</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login to Cult-IIT</h2>
-        <form id="login-form">
-            <input type="text" id="student-id" placeholder="Student ID" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p class="error-message" id="error-message"></p>
-    </div>
-    <script src="login.js"></script>
+   <!-- Login Form -->
+<div class="login-container" id="loginForm">
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <div class="login-links">
+            <a href="#" onclick="showSignUp()">Don't have an account? Sign Up</a>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </form>
+</div>
+
+<!-- Sign Up Form -->
+<div class="signup-container" id="signUpForm" style="display: none;">
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="post" onsubmit="return validateForm()">
+        <input type="text" name="student_id" placeholder="Student ID" required>
+        <input type="email" name="gmail" placeholder="Gmail ID" required>
+        <input type="text" name="phone" placeholder="Phone Number" required maxlength="10" pattern="[0-9]{10}">
+        <button type="submit">Sign Up</button>
+        <div class="login-links">
+            <a href="#" onclick="showLogin()">Back to Login</a>
+        </div>
+    </form>
+</div>
+
+
+<<script>
+    function showSignUp() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("signUpForm").style.display = "block";
+    }
+
+    function showLogin() {
+        document.getElementById("signUpForm").style.display = "none";
+        document.getElementById("loginForm").style.display = "block";
+    }
+</script>
+
+
+
+    
 </body>
 </html>
